@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>IdfParebrise</title>
@@ -7,7 +8,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAa94jNcYQ3oWM2qIrbf8UEp1xsTsg6GfE",
+      authDomain: "idf-parebrise.firebaseapp.com",
+      databaseURL: "https://idf-parebrise.firebaseio.com",
+      projectId: "idf-parebrise",
+      storageBucket: "idf-parebrise.appspot.com",
+      messagingSenderId: "698476317800",
+      appId: "1:698476317800:web:9b84e7e9bbc14ef10abfdd"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </body>
+
 </html>

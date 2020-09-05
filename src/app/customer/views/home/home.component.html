@@ -1,0 +1,92 @@
+<div class="header">
+    <div class="header-bg"></div>
+    
+    <div class="header-content">
+      <h1>IDF Pare-brise</h1>
+      <div class="desc">Réparation À DOMICILE de votre vitrage automobile dans toute l'Île de France.</div>
+      <div class="actions">
+        <a href="tel: 07 85 90 36 72" class="btn btn-success btn-lg btn-sm-block mb-1">07 85 90 36 72</a>
+        <a href="#contact" class="btn btn-warning btn-lg btn-sm-block mb-1">Prendre RDV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="offers" id="offers">
+      <h1>Nos offres</h1>
+
+      <div class="list">
+        <div class="item">
+          <h2>0€ DE FRANCHISE</h2>
+          <p>Pour le remplacement de votre pare-brise</p>
+          <p>
+            IDF PAREBRISE® vous  <strong>offre votre franchise à 100%</strong>  à hauteur de 150€  quelle que soit votre assurance.
+          </p>
+        </div>
+        <div class="item">
+          <h2>On vient CHEZ VOUS !</h2>
+          <p>Nos experts se déplacent <strong>GRATUITEMENT</strong>  chez vous ou sur votre  lieu de travail pour réparer votre véhicule. </p>
+        </div>
+        
+
+        <div class="item">
+          <h2>Véhicule Nettoyé</h2>
+          <p>Une équipe de professionnels à votre service vous restituera votre vehicule nettoyé.</p>
+        </div>
+
+        <div class="item">
+          <h2>1 paire d'AirPods OFFERTE</h2>
+          <div class="hint">*Offre valable dans la limite du stock disponible ou autre cadeau surprise.</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <div class="content">
+        <h1>Prendre rendez-vous</h1>
+        <p>Si vous souhaitez prendre rendez-vous ou simplement vous renseigner sur le prix d'un pare-brise lors d'une
+          réparation de pare-brise sans assurance.
+          Tous nos devis sont bien évidemment gratuits.
+          Remplissez ce formulaire et nous vous contacterons dans les meilleurs délais.</p>
+
+        <form>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input matInput class="form-control" placeholder="Nom" [formControl]="lastname" required>
+                <mat-error *ngIf="lastname.invalid && lastname.touched">Renseignez un nom de famille</mat-error>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input matInput type="text" class="form-control" placeholder="Prénom" [formControl]="firstname">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <input matInput type="text" class="form-control" placeholder="Téléphone" [formControl]="phone" required>
+                <mat-error *ngIf="phone.invalid && phone.touched">Renseignez un numéro de téléphone</mat-error>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <input matInput type="text" class="form-control" placeholder="Courriel" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid && email.touched">Renseignez un email valide</mat-error>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea  matInput rows="5" class="form-control" placeholder="Vos questions, commentaires... " [formControl]="comment" required></textarea>
+            <mat-error *ngIf="comment.invalid && comment.touched">Champ obligatoire</mat-error>
+          </div>
+          
+          <div class="alert alert-success" *ngIf="sent">Votre demande de RDV a bien été envoyé.</div>
+          <button type="submit" class="btn btn-success btn-lg btn-block" (click)="sendComment()" [disabled]="comment.invalid || lastname.invalid || email.invalid || phone.invalid">Envoyer</button>
+        </form>
+      </div>
+
+
+    </div>
+
+  </div>

@@ -1,0 +1,74 @@
+.header
+    position: relative
+    .header-bg
+        height: 100vh
+        background-image: url(/assets/images/idf-background.jpg)
+        background-repeat: no-repeat
+        background-size: cover
+        filter: brightness(0.5)
+    .header-content
+        position: absolute
+        top: 50%
+        transform: translate( 0, -50%)
+        color: white
+        text-align: center
+        width: 100%
+        font-family: Optima
+        h1
+            font-size: 50px
+            text-transform: uppercase
+        .desc
+            font-size: 20px
+        .actions
+            margin-top: 20px
+            a
+                margin: 10px
+                width: 100%
+                max-width: 200px
+.body
+    .offers
+        text-align: center
+        padding: 30px 10px
+        background: #F1F1F1
+        h1
+            font-weight: bold
+            color: #151096
+            font-size: 50px
+            text-transform: uppercase
+        .list
+            display: grid
+            grid-template-columns: 1fr 1fr
+            .item
+                margin: 10px
+                background: white
+                min-height: 200px
+                padding: 10px
+                border-radius: 5px
+                h2
+                    font-weight: bold
+                    color: #079adf
+                p
+                    font-size: 18px
+                    // font-weight: 600
+    .contact
+        background: #151096
+        padding: 20px 10px
+        text-align: center
+        .content
+            max-width: 800px
+            margin: 0 auto
+        h1
+            color: white
+            font-weight: bold
+            font-size: 50px
+            text-transform: uppercase
+            text-align: center
+        p
+            color: white
+            padding: 10px
+            max-width: 800px
+@media screen and ( min-width:  800px)
+    .header
+        .header-content
+            h1
+                font-size: 70px

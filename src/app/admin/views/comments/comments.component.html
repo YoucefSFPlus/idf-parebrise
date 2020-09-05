@@ -1,0 +1,20 @@
+<div class="comment-page">
+    <div class="container">
+        <div class="card"  *ngFor="let comment of comments">
+            <div class="card-body">
+              <h5 class="card-title">{{comment.firstname}} {{comment.lastname}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{comment.date.toDate() | date:'dd/MM/yy à H:mm'}}</h6>
+              <p class="card-text">{{comment.comment}}</p>
+              <p class="text-muted">tel: {{comment.phone}} email: {{comment.email}}</p>
+              <div align="end">
+                <button class='btn btn-danger' (click)="delete(comment)">SUPPRIMER</button>
+                <!-- <button mat-button>Appeler</button> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="empty" *ngIf="!comments || comments.length == 0">
+              Pas de message pour le moment.
+          </div>
+    </div>
+</div>

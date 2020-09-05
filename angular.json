@@ -123,8 +123,13 @@
               "devServerTarget": "idf-parebrise:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "idf-parebrise"
 }

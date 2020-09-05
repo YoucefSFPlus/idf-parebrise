@@ -1,4 +1,7 @@
 
+.page-content
+    min-height: 100vh
+    // padding-top: 140px
 .nav
     position: fixed
     top: 0
@@ -20,71 +23,7 @@
                 background: rgba(0, 0, 0, 0.5)
                 &:hover
                     color: white
-.header
-    position: relative
-    .header-bg
-        height: 100vh
-        background-image: url(/assets/images/idf-background.jpg)
-        background-repeat: no-repeat
-        background-size: cover
-        filter: brightness(0.5)
-    .header-content
-        position: absolute
-        top: 50%
-        transform: translate( 0, -50%)
-        color: white
-        text-align: center
-        width: 100%
-        font-family: Optima
-        h1
-            font-size: 50px
-            text-transform: uppercase
-        .desc
-            font-size: 20px
-        .actions
-            margin-top: 20px
-            a
-                margin: 10px
-                width: 100%
-                max-width: 200px
-.body
-    .offers
-        text-align: center
-        padding: 10px
-        margin: 20px 0
-        h1
-            font-weight: bold
-            color: #151096
-            font-size: 50px
-            text-transform: uppercase
-        .list
-            display: grid
-            grid-template-columns: 1fr 1fr
-            .item
-                padding: 10px
-                h2
-                    font-weight: bold
-                    color: #079adf
-                p
-                    font-size: 18px
-                    font-weight: 600
-    .contact
-        background: #151096
-        padding: 20px 10px
-        text-align: center
-        .content
-            max-width: 800px
-            margin: 0 auto
-        h1
-            color: white
-            font-weight: bold
-            font-size: 50px
-            text-transform: uppercase
-            text-align: center
-        p
-            color: white
-            padding: 10px
-            max-width: 800px
+
 .footer
     min-height: 100px
     background: #000
@@ -92,12 +31,9 @@
     .copyright
         color: #777
         padding: 20px 
-
+.mat-error
+    color: red
 @media screen and ( min-width:  800px)
     .nav
         img
             width: 200px
-    .header
-        .header-content
-            h1
-                font-size: 70px

@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "idf-parebrise"
+  },
+  "targets": {
+    "idf-parebrise": {
+      "hosting": {
+        "idf-parebrise": [
+          "idf-parebrise"
+        ]
+      }
+    }
   }
 }

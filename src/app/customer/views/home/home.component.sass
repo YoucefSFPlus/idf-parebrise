@@ -26,7 +26,7 @@
                 width: 100%
                 max-width: 200px
 .body
-    .offers
+    .offers, .services
         text-align: center
         padding: 30px 10px
         background: #F1F1F1
@@ -37,7 +37,6 @@
             text-transform: uppercase
         .list
             display: grid
-            grid-template-columns: 1fr 1fr
             .item
                 margin: 10px
                 background: white
@@ -50,6 +49,17 @@
                 p
                     font-size: 18px
                     // font-weight: 600
+    .services
+        background: #940303
+        .list
+            .item
+                background: #840303
+                h2
+                    color: white
+                p
+                    color: #F1F1F1
+        h1
+            color: white
     .contact
         background: #151096
         padding: 20px 10px
@@ -72,3 +82,10 @@
         .header-content
             h1
                 font-size: 70px
+    .body
+        .services
+            .list
+                grid-auto-flow: column
+        .offers
+            .list
+                grid-template-columns: 1fr 1fr

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import {FormControl, Validators} from '@angular/forms';
+import axios from 'axios';
 
+import { environment } from 'src/environments/environment';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireFunctions } from '@angular/fire/functions';
 
 @Component({
   selector: 'app-home',
@@ -18,13 +21,14 @@ export class HomeComponent implements OnInit {
   sent = false;
 
   constructor(
-    private afs: AngularFirestore
+    private afs: AngularFirestore,
+    private fun: AngularFireFunctions
   ){}
 
   ngOnInit() {
   }
 
-  sendComment(){
+  async sendComment(){
     this.afs.collection(`comments`).add({
       lastname: this.lastname.value,
       firstname: this.firstname.value,

@@ -7,5 +7,6 @@ export const environment = {
     projectId: 'idf-parebrise'
     // storageBucket: '<your-storage-bucket>',
     // messagingSenderId: '<your-messaging-sender-id>'
-  }
+  },
+  MAIL_API_KEY: "ce203518c212bbe408ab9e071a51e0bf4c33447deb46a945cc4992ec889d3205"
 };

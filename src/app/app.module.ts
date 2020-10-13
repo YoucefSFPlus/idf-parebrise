@@ -43,6 +43,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireStorageModule, StorageBucket } from '@angular/fire/storage';
+import { AngularFireFunctionsModule, ORIGIN } from '@angular/fire/functions';
 import {
   AngularFirestore,
   AngularFirestoreDocument,
@@ -73,6 +74,7 @@ import { HomeComponent } from './customer/views/home/home.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule,
+    AngularFireFunctionsModule,
     // MATERIAL
     MatTableModule,
     MatTabsModule,
@@ -109,6 +111,7 @@ import { HomeComponent } from './customer/views/home/home.component';
     AngularFireAuthGuard,
     AngularFireDatabase,
     AngularFirestore,
+    { provide: ORIGIN, useValue: 'https://idf-parebrise.fr' }
   ],
   bootstrap: [AppComponent]
 })

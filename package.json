@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~8.2.9",
     "@angular/router": "~8.2.9",
     "@mdi/angular-material": "^5.5.55",
+    "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "firebase": ">= 5.5.7 <8",
     "material-design-icons": "^3.0.1",
